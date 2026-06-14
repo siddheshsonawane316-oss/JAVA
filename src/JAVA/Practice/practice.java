@@ -7,6 +7,7 @@ public class practice{
 
         System.out.println(Addition.operate(5,10));
          System.out.println(Substraction.operate(5,10));
+         System.out.println("********************");
     }
 
 
