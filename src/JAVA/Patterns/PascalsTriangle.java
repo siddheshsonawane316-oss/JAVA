@@ -1,5 +1,11 @@
 package JAVA.Patterns;
-
+/*
+1
+1 1
+1 2 1
+1 3 3 1
+1 4 6 4 1
+ */
 public class PascalsTriangle {
     static void main() {
         // 2D array to store Pascal's Triangle values
