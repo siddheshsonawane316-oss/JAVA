@@ -2,31 +2,36 @@ package JAVA.Arrays.Basics;
 
 public class MoveZeroes {
     static void main(String[] args) {
-        int arr[]={0,1,12,0};
+        int arr[] = {0, 1, 12, 0};
 
-        // 'l' points to the next position where a non-zero element should be placed
-        int l=0;
+        // Points to the next position for a non-zero element
+        int w = 0;
 
-        // 'r' scans every element of the array
-        for (int r = 0; r < arr.length; r++) {
+        // Scans the entire array
+        int r = 0;
 
-            // If the current element is non-zero,
-            // move it to the front of the array.
-            if(arr[r]!=0){
+        // Traverse the array
+        while (r < arr.length) {
 
-                // Swap the current non-zero element
-                // with the element at index 'l'
-                int temp=arr[l];
-                arr[l]=arr[r];
-                arr[r]=temp;
+            // Found a non-zero element
+            if (arr[r] != 0) {
 
-                // Move 'l' to the next position
-                // where the next non-zero element should be placed
-                l++;
+                // Place the non-zero element at the front
+                int temp = arr[w];
+                arr[w] = arr[r];
+                arr[r] = temp;
+
+                // Move to the next position
+                w++;
             }
+
+            // Continue scanning
+            r++;
         }
-    for(int i:arr){
-        System.out.println(i);
-    }
+
+        // Print the modified array
+        for (int i : arr) {
+            System.out.println(i);
+        }
     }
 }
